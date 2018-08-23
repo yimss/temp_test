@@ -1,0 +1,10 @@
+<!--logs.wxml-->
+<!-- <import src="../template/template.wxml"/> -->
+<import src="../../sao/sao.wxml"/>
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+  <!-- <template is="tabbar" data="{{tabber}}"/> -->
+  <template is="sao" data="{{tabbar}}"/>
+</view>

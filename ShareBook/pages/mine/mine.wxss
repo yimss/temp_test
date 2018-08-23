@@ -1,0 +1,13 @@
+/* pages/mine/mine.wxss */
+.hd{
+  background-image: url("http://up.enterdesk.com/edpic_source/3a/61/d3/3a61d3d19006fcd42230426e7c886cbb.jpg");
+  width: 100vw;
+  height: 240rpx;
+  /* background-color: red; */
+}
+.hd_img{
+  width: 144rpx;
+  height: 144rpx;
+  margin: 42rpx 0rpx 0rpx 40rpx;
+  border-radius: 50%;
+}

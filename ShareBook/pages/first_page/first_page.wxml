@@ -1,0 +1,107 @@
+<!--pages/first_page.wxml-->
+<import src="../../sao/sao.wxml"/>
+<!-- <import src="../template/template.wxml"/> -->
+<view class='page'>
+  <!-- <input placeholder='{{origin_input_value}}'></input> -->
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="{{origin_value}}" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <!-- <icon type="clear" size="14"></icon> -->
+          </view>
+        </view>
+        <!-- <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">{{show_find}}</view>
+        </label> -->
+      </view>
+      <view class='kinds_select'>
+        <navigator>
+          <view class='kinds_image'>
+            <image class='kinds_image' src='../../images/test.png'></image>
+            <!-- <canvas class="canvas-size" id='canvas'></canvas> -->
+          </view>
+          <!-- <image></image> -->
+          <text class='kinds_text'>分类</text>
+        </navigator>
+      </view>
+      <!-- <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view> -->
+    </view>
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本1</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本2</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本3</view>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本4</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="page-section page-section-spacing swiper">
+    <swiper
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='bookform'>
+    <view class='choose'>
+      <!-- <block wx:for="{{logs}}" wx:for-item="log">
+        <text class="log-item">{{index + 1}}. {{log}}</text>
+      </block> -->
+      <!-- choose按钮 -->
+      <block wx:for="{{chooses}}" wx:for-item="choose">
+        <view class='choosebox'>
+          <button class="chooseitem {{_num==index+1?'hover-choose-button':''}}" data-num = "{{index+1}}" bindtouchstart='choosekinds'>
+          {{choose}}
+          </button>
+        </view>
+      </block>
+      <!-- chooseview -->
+      <!-- <view class="list-wrapper">
+        <view class="list-top">
+          <view data-num="1" class="list-menu list-menu1 {{_num==1?'cur':''}}" bindtap="menuClick">1</view>
+          <view data-num="2" class="list-menu list-menu2 {{_num==2?'cur':''}}" bindtap="menuClick">2</view>
+          <view data-num="3" class="list-menu list-menu3 {{_num==3?'cur':''}}" bindtap="menuClick">3</view>
+        </view>
+      </view> -->
+    </view>
+    <form>
+      <view class="show">
+        <block wx:for="{{books}}" wx:for-item="book">
+          <view class='bookmini'>
+            <image class="booktype">{{book.booktype}}{{index+1}}</image>
+            <view class='imgandname'>
+              <image class="bookimg">{{book.bookimg}}{{index+1}}</image>
+              <text class='bookname'>{{book.bookname}}{{index+1}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </form>
+  </view>
+  <!-- <template is="tabbar" data="{{tabber}}"/> -->
+  <template is="sao" data="{{tabbar}}"/>
+</view>
+
+

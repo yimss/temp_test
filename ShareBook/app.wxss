@@ -1,0 +1,49 @@
+/**app.wxss**/
+/* 导入weUI样式 */
+@import 'weUI_style/weui.wxss';
+/* 导入tabbar样式 */
+@import 'template/template.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/* 底部tabbar */
+.tabbar{
+  position: fixed;
+  width: 100vw;
+  height: 10.4vh;
+  bottom: 0rpx;
+}
+.circleview{
+  /* position: absolute; */
+  width: 15vw;
+  height: 15vw;
+  margin-top: 5rpx;
+  margin-left: 43.3vw;
+  margin-right: 43.3vw;
+  background: black;
+  border-radius:50%;
+  display: block;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.circlebtn{
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 0.8vw;
+  border-radius:25%;
+}
+.whitearea{
+  position: absolute;
+  height: 100rpx;
+  background: red;
+  z-index: -1;
+}
+.allbtn{
+  position: relative;
+}
