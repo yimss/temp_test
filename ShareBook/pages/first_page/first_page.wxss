@@ -25,14 +25,14 @@
   background: #efeff4;
 } */
 /* 分类按钮样式 */
-.kinds_select{
-  margin-left: 22rpx;
+.classify{
+  margin-left: 25.4rpx;
   /* margin-right: 22rpx; */
   margin-top: -20rpx;
   margin-bottom: -25rpx;
   margin-right: 10rpx;
 }
-.kinds_image{
+.classify_image{
   /* position:relative; */
   margin-top: 10rpx;
   height: 50rpx;
@@ -48,9 +48,12 @@
   background-color: #ffffff;
   display: block;
 } */
-.kinds_text{
+.classify_text{
   font-size: 28rpx;
   bottom: 10rpx;
+  font-family: 'PingFangSC-Regular';
+  /* height: 28rpx;
+  width: 44rpx; */
   /* padding-bottom: -15rpx; */
 }
 /* 轮播图样式 */

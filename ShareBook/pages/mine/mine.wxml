@@ -1,11 +1,55 @@
 <!--pages/mine/mine.wxml-->
 <import src="../../sao/sao.wxml"/>
 <!-- <text>pages/mine/mine.wxml</text> -->
-<template is="sao" data="{{tabbar}}"/>
 <view class='page'>
   <view class='hd'>
     <!-- <image src='../../images/test.png' class='bg_img'></image> -->
-    <image src='../../images/test.png' class='hd_img'></image>
+    <image src='../../images/mine_head.png' class='hd_img'></image>
+    <text class='name'>{{name}}</text>
+    <text class='personclass'>{{personclass}}</text>
+    <view class='bookcoinbox'>
+      <!-- <image class='coinbg'></image> -->
+      <image src='../../images/bookcoin.png' class='bookcoin'></image>
+      <text class='coinnumber'>{{coinnumber}}书币</text>
+    </view>
   </view>
-  
+  <view class='book_information'>
+    <view class='name_box'>
+      <text class='book_information_name'>{{book_information_name}}</text>
+    </view>
+    <block wx:for="{{book_information_list}}" wx:for-item="book_information" wx:key="{{index}}">
+      <view class="list-item">
+        <navigator url="../pages/" class="navigator">
+          <image class='navigator-icon' src='../../images/{{book_information.icon}}'></image>
+          <view class="navigator-name">
+            <text>{{book_information.name}}</text>
+          </view>
+          <view class='navigator-info'>
+          <text>{{book_information.info}}本书</text>
+          </view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <view class='functionarea'>
+    <view class='name_box'>
+      <text class='function_name'>{{function_name}}</text>
+    </view>
+    <block wx:for="{{function_list}}" wx:for-item="function" wx:key="{{index}}">
+      <view class="list-item">
+        <navigator url="../pages/" class="navigator">
+          <image class='navigator-icon' src='../../images/{{function.icon}}'></image>
+          <view class="navigator-name">
+            <text>{{function.name}}</text>
+          </view>
+          <view class='navigator-info'>
+          <text>{{function.info}}</text>
+          </view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <template is="sao" data="{{tabbar}}"/>
 </view>

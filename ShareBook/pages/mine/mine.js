@@ -5,34 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
+    name: "王咪咪",
+    personclass: "六年级 四班",
+    coinnumber: 36,
+    book_information_name: "图书讯息",
+    book_information_list: [
+      { name: "我的借阅", icon: "kind_list_1_1.png", info: "18" },
+      { name: "我的分享", icon: "kind_list_1_2.png", info: "4" },
+      { name: "我的书库", icon: "kind_list_1_3.png", info: "18" },
+      { name: "想读图书", icon: "kind_list_1_4.png", info: "18" }
+    ],
+    function_name: "功能",
+    function_list: [
+      { name: "添加至桌面", icon: "kind_list_2_1.png", info: "新增桌面捷径" }
+    ],
     // 重写tabbar数据
     // tabbar: {}
     tabbar: {
-      color: "#242424",
-      selectedColor: "#fa8582",
+      color: "##333333",
+      selectedColor: "#1D82D2",
       backgroundColor: "#ffffff",
       borderStyle: "#d7d7d7",
       list: [
         {
           pagePath: "/pages/first_page/first_page",
           text: "首页",
-          iconPath: "../../images/first_test.png",
-          selectedIconPath: "../../images/first_test.png",
-          selected: true
+          iconPath: "../../images/index.png",
+          selectedIconPath: "../../images/index_click.png",
+          selected: false
         },
         {
           pagePath: "/pages/logs/logs",
-          text: "扫一扫",
-          iconPath: "../../images/circle.png",
-          selectedIconPath: "../../images/tab_new.png",
+          text: "",//扫一扫
+          iconPath: "../../images/scan.png",
+          selectedIconPath: "../../images/scan.png",
           selected: false
         },
         {
           pagePath: "/pages/mine/mine",
           text: "我的",
-          iconPath: "../../images/my_test.png",
-          selectedIconPath: "../../images/tab4_cur.png",
-          selected: false
+          iconPath: "../../images/mine.png",
+          selectedIconPath: "../../images/mine_click.png",
+          selected: true
         }
       ],
       position: "bottom"
@@ -94,21 +108,21 @@ Page({
   onShareAppMessage: function () {
   
   },
-  //tabBar方法
-  changeTabBar: function () {
-    var _curPageArr = getCurrentPages();
-    var _curPage = _curPageArr[_curPageArr.length - 1];
-    var _pagePath = _curPage.__route__;
-    if (_pagePath.indexOf('/') != 0) {
-      _pagePath = '/' + _pagePath;
-    }
-    var tabBar = this.tabbar;
-    for (var i = 0; i < tabBar.list.length; i++) {
-      console.log(_pagePath + '--' + tabBar.list[i].pagePath)
-      tabBar.list[i].selected = false;
-      if (tabBar.list[i].pagePath == _pagePath) {
-        tabBar.list[i].selected = true;//根据页面地址设置当前页面状态  
-      }
-    }
-  },
+  // //tabBar方法
+  // changeTabBar: function () {
+  //   var _curPageArr = getCurrentPages();
+  //   var _curPage = _curPageArr[_curPageArr.length - 1];
+  //   var _pagePath = _curPage.__route__;
+  //   if (_pagePath.indexOf('/') != 0) {
+  //     _pagePath = '/' + _pagePath;
+  //   }
+  //   var tabBar = this.tabbar;
+  //   for (var i = 0; i < tabBar.list.length; i++) {
+  //     console.log(_pagePath + '--' + tabBar.list[i].pagePath)
+  //     tabBar.list[i].selected = false;
+  //     if (tabBar.list[i].pagePath == _pagePath) {
+  //       tabBar.list[i].selected = true;//根据页面地址设置当前页面状态  
+  //     }
+  //   }
+  // },
 })

@@ -18,14 +18,14 @@
             <view class="weui-search-bar__text">{{show_find}}</view>
         </label> -->
       </view>
-      <view class='kinds_select'>
+      <view class='classify'>
         <navigator>
-          <view class='kinds_image'>
-            <image class='kinds_image' src='../../images/test.png'></image>
+          <view class='classify_image'>
+            <image class='classify_image' src='../../images/classify.png'></image>
             <!-- <canvas class="canvas-size" id='canvas'></canvas> -->
           </view>
           <!-- <image></image> -->
-          <text class='kinds_text'>分类</text>
+          <text class='classify_text'>分类</text>
         </navigator>
       </view>
       <!-- <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view> -->
@@ -70,7 +70,7 @@
         <text class="log-item">{{index + 1}}. {{log}}</text>
       </block> -->
       <!-- choose按钮 -->
-      <block wx:for="{{chooses}}" wx:for-item="choose">
+      <block wx:for="{{chooses}}" wx:for-item="choose" wx:key="{{index}}">
         <view class='choosebox'>
           <button class="chooseitem {{_num==index+1?'hover-choose-button':''}}" data-num = "{{index+1}}" bindtouchstart='choosekinds'>
           {{choose}}
@@ -88,7 +88,7 @@
     </view>
     <form>
       <view class="show">
-        <block wx:for="{{books}}" wx:for-item="book">
+        <block wx:for="{{books}}" wx:for-item="book" wx:key="{{index}}">
           <view class='bookmini'>
             <image class="booktype">{{book.booktype}}{{index+1}}</image>
             <view class='imgandname'>
