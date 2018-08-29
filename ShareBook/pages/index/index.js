@@ -11,11 +11,44 @@ Page({
     loginbutton: "Login",
     // 重写tabbar数据
     // tabbar: {}
+    // loading: true,
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  getinf_request: function() {
+    wx.request({
+      url: 'https://14592619.qcloud.la/testRequest',
+      data:{
+        noncestr: Date.now(),
+        test: "This is a test request!!"
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "GET",
+      dataType: "json",
+      success: function(result){
+        wx.showToast({
+          title: '请求成功',
+          icon: 'success',
+          mask: true,
+          duration: 2000
+        })
+        // this.setData({
+        //   loading: false,
+        // })
+        console.log('request success', result)
+      },
+      fail: function ( errMsg ) {
+        console.log('request fail', errMsg)
+        this.setData({
+          loading: false
+        })
+      }
     })
   },
   onLoad: function () {

@@ -12,7 +12,7 @@
         </text>
       </view>
         <navigator class='loginbtn' url='../first_page/first_page' open-type='redirect'>
-          <button>
+          <button bindtap='getinf_request'>
             {{loginbutton}}
           </button>
         </navigator>
