@@ -8,7 +8,7 @@
 	<!-- BootStrap.js -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- fullpage.js -->
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery.fullPage.js"></script> -->
 	<!-- unslider轮播图的js文件 -->
 	<script type="text/javascript" src="js/unslider.min.js"></script>
 	<!-- 首页js文件 -->
@@ -17,16 +17,68 @@
 	<!-- bootstrap.css -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- fullpage样式 -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"> -->
+	<!-- 案例图片的css3动态 -->
+	<link rel="stylesheet" type="text/css" href="css/img_hover.css">
+	<!-- 浮动框 -->
+	<link rel="stylesheet" type="text/css" href="css/suspension_float_right.css">
 	<!-- 首页css文件 -->
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
+	<!-- 右侧悬浮框 -->
+	<div class="suspension_right">
+		<div class="suspension-box">
+			<a href="javascript:;" class="float_function" id="function_1">
+				<img src="images/float_up_icon.png">
+				<p>TOP</p>
+			</a>
+			<a href="javascript:;" class="float_function" id="function_2">
+				<img src="images/float_wechat_icon.png">
+			</a>
+			<a href="javascript:;" class="float_function" id="function_3">
+				<img src="images/float_qq_icon.png">
+			</a>
+			<a href="javascript:;" class="float_function" id="function_4">
+				<img src="images/float_phone_icon.png">
+			</a>
+			<div class="service service_2 service_hide">
+			</div>
+			<div class="service service_3 service_hide">
+				<p>QQ:&nbsp67894456</p>
+			</div>
+			<div class="service service_4 service_hide">
+
+			</div>
+		</div>
+	</div>
+	<!-- 头部悬浮框 -->
+	<div class="suspension_top">
+		<div class="head_div">
+			<div class="head_content">
+				<div class="logo_div">
+					<img src="images/head_logo.png">
+				</div>
+				<div class="button_div">
+					<p class="thispage">首页</p>
+					<p class="">服务</p>
+					<p class="">案例</p>
+					<p class="">关于我们</p>
+				</div>
+				<div class="phonenumber_div">
+					<p class="chinese">服务热线</p>
+					<p class="number">0574-81879639</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主要内容 -->
 	<div id="allsections">
 		<div class="section" id="section_1">
 			<!-- <h1>1</h1> -->
 			<div class="head_div">
-				<div class="head_content">
+				<!-- 页面最上方 -->
+				<!--<div class="head_content">
 					<div class="logo_div">
 						<img src="images/head_logo.png">
 					</div>
@@ -40,7 +92,7 @@
 						<p class="chinese">服务热线</p>
 						<p class="number">0574-81879639</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="banner" id="b06">
 			    <ul style="padding-left: 0px;margin:0px;">
@@ -96,9 +148,11 @@
 						<p>技术与服务</p>
 					</div>
 				</div>
-				<a href="javascript:;" class="next_section">
-					<img  src="images/next_btn.png">
-				</a>
+				<!-- <div class="next_div"> -->
+					<a href="javascript:;" class="next_section">
+						<img  src="images/next_btn.png">
+					</a>
+				<!-- </div> -->
 			</div>
 		</div>
 		<div class="section" id="section_2">
@@ -128,10 +182,12 @@
 						<p id="text_5">稳定的系统质量</p>
 						<p id="text_6">卓越的行业品质</p>
 					</div>
+				</div>
+				<!-- <div class="next_div"> -->
 					<a href="javascript:;" class="next_section">
 						<img  src="images/next_btn.png">
 					</a>
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 		<div class="section" id="section_3">
@@ -140,6 +196,7 @@
 					<p>服务<span>流程？</span></p>
 				</div>
 				<div class="service_process">
+					<div class='left_bottom_box box_1 line_box' style='background-color: rgba(255,255,255, 0); width: 245px; margin-left: 0px; bottom: 0px; '></div>
 					<!-- <div class="left_bottom_box box_1 box__1">
 						<p class="process_text">客户需求分析</p>
 					</div>
@@ -176,37 +233,172 @@
 					<p>案例</p>
 				</div>
 				<div class="example_kinds">
-					<div class="kinds_button">
-						<p>网页开发</p>
+					<div class="kinds_button kinds_button_c">
+						<p class="p_unc p_c">网页开发</p>
 					</div>
-					<p>/</p>
+					<p class="separation_dot">/</p>
 					<div class="kinds_button">
-						<p>APP软件开发</p>
+						<p class="p_unc">APP软件开发</p>
 					</div>
-					<p>/</p>
+					<p class="separation_dot">/</p>
 					<div class="kinds_button">
-						<p>微信公众号/小程序开发</p>
+						<p class="p_unc">微信公众号/小程序开发</p>
 					</div>
-					<p>/</p>
+					<p class="separation_dot">/</p>
 					<div class="kinds_button">
-						<p>移动WEB开发</p>
+						<p class="p_unc">移动WEB开发</p>
 					</div>
+				</div>
+				<div class="examples">
+					<div class="grid">
+						<figure class="effect-julia">
+							<img src="images/example_1.png" alt="example_1">
+							<figcaption>
+								<!-- <h2>天天享读<span>APP</span></h2> -->
+								<div>
+									<p class="example_name">天天享读APP</p>
+									<p class="example_info">中小学生的读书分享平台</p>
+								</div>
+								<a href="#/index2.html#">View more</a>
+							</figcaption>			
+						</figure>
+						<figure class="effect-julia">
+							<img src="images/example_2.png" alt="example_1">
+							<figcaption>
+								<!-- <h2>天天享读<span>APP</span></h2> -->
+								<div>
+									<p class="example_name">天天享读APP</p>
+									<p class="example_info">中小学生的读书分享平台</p>
+								</div>
+								<a href="#/index2.html#">View more</a>
+							</figcaption>			
+						</figure>
+						<figure class="effect-julia">
+							<img src="images/example_3.png" alt="example_1">
+							<figcaption>
+								<!-- <h2>天天享读<span>APP</span></h2> -->
+								<div>
+									<p class="example_name">天天享读APP</p>
+									<p class="example_info">中小学生的读书分享平台</p>
+								</div>
+								<a href="#/index2.html#">View more</a>
+							</figcaption>			
+						</figure>
+						<figure class="effect-julia">
+							<img src="images/example_2.png" alt="example_1">
+							<figcaption>
+								<!-- <h2>天天享读<span>APP</span></h2> -->
+								<div>
+									<p class="example_name">天天享读APP</p>
+									<p class="example_info">中小学生的读书分享平台</p>
+								</div>
+								<a href="#/index2.html#">View more</a>
+							</figcaption>			
+						</figure>
+						<figure class="effect-julia">
+							<img src="images/example_3.png" alt="example_1">
+							<figcaption>
+								<!-- <h2>天天享读<span>APP</span></h2> -->
+								<div>
+									<p class="example_name">天天享读APP</p>
+									<p class="example_info">中小学生的读书分享平台</p>
+								</div>
+								<a href="#/index2.html#">View more</a>
+							</figcaption>			
+						</figure>
+						<figure class="effect-julia">
+							<img src="images/example_1.png" alt="example_1">
+							<figcaption>
+								<!-- <h2>天天享读<span>APP</span></h2> -->
+								<div>
+									<p class="example_name">天天享读APP</p>
+									<p class="example_info">中小学生的读书分享平台</p>
+								</div>
+								<a href="#/index2.html#">View more</a>
+							</figcaption>			
+						</figure>
+					</div>
+				</div>
+				<div class="next_div">
+					<a href="javascript:;" class="next_section">
+						<img  src="images/next_btn.png">
+					</a>
+				</div>
+				<div class="get_more_example">
+					<p>更多案例</p>
 				</div>
 			</div>
 		</div>
 		<div class="section" id="section_5">
-			<h1>5</h1>
-		</div>
-	</div>
-<!-- 	<head class="head_div">
-		<div class="head_content">content</div>
-	</head> -->
-<!-- 	<div class="head_div">
-		<div class="head_content">
-			<div class="logo_div">
-				<img src="images/head_logo.png">
+			<div class="fifth_info">
+				<div class="about_bg">
+					<div class="about_div">
+						<div class="title_5">
+							<p><span>关于</span>我们</p>
+						</div>
+						<div class="about_text">
+							<p>宁波嘉赛信息技术有限公司是一家专业从事软件开发、系统集成的高新技术企业，专注于企业信息化服务和智慧校园服务。
+								公司核心团队具有雄厚的技术实力，在软件领域经过多年的经验积累，建立了一套完善的运营管理体制，提供符合软件整
+								个开发生命周期的过程服务和运维服务。<br>公司作为浙江电信和宁波互联网融合创新中心的合作伙伴之一，积极拓展软件服务和智慧校园业务市场，通过本地化的团
+								队服务和运维满足客户的需求，秉承“客户价值第一”的理念，努力实现持续稳定的长期发展目标。</p>
+						</div>
+						<div class="join_us">
+							<p>加入我们</p>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="next_div"> -->
+					<a href="javascript:;" class="next_section">
+						<img  src="images/next_btn.png">
+					</a>
+				<!-- </div> -->
 			</div>
 		</div>
-	</div> -->
+		<div class="section" id="section_6">
+			<div class="sixth_info">
+				<div class="location">
+
+					<!-- <img src="images/location.png" alt="周边地图"> -->
+					<img src="images/pot.png" alt="我们在这里">
+				</div>
+				<div class="buttom">
+					<div class="buttom_content">
+						<div class="buttom_logo">
+							<img src="images/buttom_logo.png" alt="logo">
+						</div>
+						<div class="buttom_line">
+							
+						</div>
+						<div class="contact_title">
+							<p>
+								联系我们/CONTANT US
+							</p>
+							<img src="images/red_.png" alt="联系我们">
+						</div>
+						<div class="location_text">
+							<img src="images/location_text_icon.png" alt="地址">
+							<p>地址：浙江省宁波市鄞州区福明街道宁穿路1678号盛世方舟5楼</p>
+						</div>
+						<div class="phonenumber">
+							<img src="images/phonenumber_icon.png" alt="电话">
+							<p>电话：0574-81879639&nbsp&nbsp&nbsp&nbsp周一至周五 9:00-17:30</p>
+						</div>
+						<div class="e-mail">
+							<img src="images/e-mail_icon.png" alt="邮箱">
+							<p>邮箱：88990098@qq.com</p>
+						</div>
+						<div class="QR_code">
+							<img src="images/QR_code.png" alt="二维码">
+							<p>微信二维码</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<footer class="footer_style">
+		<p>© 2018 宁波嘉赛信息技术有限公司 浙ICP备15054809号</p>
+	</footer>
 </body>
 </html>

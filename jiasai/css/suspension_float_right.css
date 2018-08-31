@@ -1,0 +1,99 @@
+.suspension_right{
+	position:fixed;
+	z-index:66;
+	/*right: 15.8vw;*/
+	right: 0px;
+	top: 321px;
+	width:75px;
+	height:210px;
+}
+.suspension_right .suspension-box{
+	position:relative;
+	float:right;
+	width: 55px;
+/*	opacity: 0.6;
+	background: #000000;*/
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.suspension-box p{
+	font-family: MicrosoftYaHei-Bold;
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 19px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: inline-block;
+	position: absolute;
+	top: 17px;
+	left: 13px;
+}
+.suspension-box .float_function{
+	display: block;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	/*justify-content: center;*/
+	z-index: 67;
+	text-decoration: none;
+}
+.float_function img{
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+/*	margin-top: 9px;
+	margin-bottom: 25px;*/
+	vertical-align: middle;
+}
+.float_function:hover{
+	background-color: #33CFDE;
+}
+#function_1{
+	height: 45px;
+}
+#function_1 img{
+	position: absolute;
+	margin-top: 9px;
+	left: 50%;
+	margin-left: -4.5px;
+	width: 9px;
+	height: 5.5px;
+}
+.suspension_top{
+	position:fixed;
+	z-index:66;
+	/*left: 0px;*/
+	top: 0px;
+	background-color: #ffffff;
+}
+.suspension-box .service{
+	position: absolute;
+	left:0px;
+	margin-left: -175px;
+	top: 0px;
+	width: 175px;
+	background-color: #33CFDE;
+}
+.service p{
+	font-family: "MicrosoftYaHei-Bold";
+	font-size: 16px;
+	color: #FFFFFF;
+	letter-spacing: 0px;
+	line-height: 21px;
+	margin-left: 35px;
+}
+.suspension-box .service_2{
+	height: 210px;
+}
+.suspension-box .service_3{
+	margin-top: 100px;
+	height: 55px;
+}
+.suspension-box .service_4{
+	margin-top: 155px;
+	height: 55px;
+}
+.service_hide{
+	display: none;
+}
